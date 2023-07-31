@@ -21,9 +21,11 @@ const usersHandlers = require("./usersHandlers");
 app.get("/api/movies", movieHandlers.getMovies);
 app.post("/api/movies", movieHandlers.postMovie);
 app.get("/api/movies/:id", movieHandlers.getMovieById);
+app.put("/api/movies/:id", movieHandlers.updateMovie);
 app.get("/api/users", usersHandlers.getUsers);
 app.post("/api/users", usersHandlers.postUsers);
 app.get("/api/users/:id", usersHandlers.getUsersById);
+app.put("/api/users/:id", usersHandlers.updateUsers);
 
 
 app.listen(port, (err) => {
