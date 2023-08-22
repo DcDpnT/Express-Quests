@@ -31,9 +31,9 @@ app.get("/api/users/:id", usersHandlers.getUsersById);
 app.put("/api/users/:id", usersHandlers.updateUsers);
 app.delete("/api/users/:id", usersHandlers.deleteUser);
 app.post("/api/movies", validateMovie, movieHandlers.postMovie);
-app.put("/api/movies", validateMovie, movieHandlers.updateMovie);
+app.put("/api/movies/:id", validateMovie, movieHandlers.updateMovie);
 app.post("/api/users", validateUser, usersHandlers.postUsers);
-app.put("/api/users", validateUser, usersHandlers.updateUsers);
+app.put("/api/users/:id", validateUser, usersHandlers.updateUsers);
 
 
 app.listen(port, (err) => {
